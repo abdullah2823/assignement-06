@@ -2,6 +2,8 @@
 <html lang="en">
 
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +14,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+
+
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
+
+
     <!-- style -->
     <link rel="stylesheet" href="style/style.css">
 </head>
+
+
 
 
 <body class="inter bg-green-50">
@@ -38,6 +46,8 @@
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><a>About</a></li>
                         <li><a>Gallary</a></li>
+
+
 
 
                         <li><a>Plant a Tree</a></li>
@@ -59,6 +69,7 @@
             </div>
         </div>
     </header>
+    <!-- banner -->
     <section class="banner-section">
         <div class=" bg-[#CFF0DC] mx-auto flex flex-col-reverse md:flex-row items-end justify-center px-4 ">
             <img class="lg:w-[546px]" src="./assets/hero-leaf1.png" alt="">
@@ -69,155 +80,62 @@
                     generations.</p>
 
 
+
+
                 <div class="text-center my-3 py-10 ">
                     <button
                         class="btn btn-ghost text-[#15803D] py-3 px-5 text-[16px] font-semibold rounded-3xl bg-[#FACC15] hover:bg-green-500">Get
                         Involved</button>
                 </div>
             </div>
-            <img class="w-[200px] lg:w-[546px]" src="./assets/hero-leaf2.png" alt="">
+            <img class=" lg:w-[546px]" src="./assets/hero-leaf2.png" alt="">
+
+
 
 
         </div>
     </section>
-
+    <!-- tree card -->
     <section class="tree w-11/12 mx-auto">
         <div>
-            <h2 class="text-[32px] font-semibold text-center">Choose Your Trees</h2>
+            <h2 class="text-[32px] font-semibold text-center py-7 gap-7">Choose Your Trees</h2>
 
-            <div class="border-2 border-green-800 grid grid-cols-6 gap-5 ">
-                <div class="border-2 border-red-500 grid col-span-1 h-56">
-                    <h2 class="text-[20px] font-semibold inter">Categories</h2>
-                    <ul class=" text[16px] font-normal space-y-3 ">
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">All Trees </a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Fruit Trees </a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Fruit Trees</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Shade Trees</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Medicinal Trees</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Timber Trees</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Evergreen Trees</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Ornamental Plants</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Bamboo </a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Climbers</a></li>
-                        <li class="text[16px] font-normal p-3  hover:bg-green-800 hover:text-white hover:rounded-sm"><a
-                                href="">Aquatic Plants</a></li>
-                    </ul>
+
+            <div class="grid-cols-1 md:grid grid-cols-6 gap-5 ">
+                <div class=" md:grid col-span-1">
+                    <div id="tree-categories"></div>
+                   
                 </div>
-                <div class="border-2 border-red-500 grid col-span-4  ">
-                    <div class="flex flex-wrap gap-5 justify-center py-10">
+                <div id="all-plants" class="col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    
+
+
+                    </div>
+
+
+                </div>
+                <div class="bg-white shadow-md max-h-screen p-3 rounded-2xl ">
+                    <h2 class="text-[20px] font-semibold">Your Cart</h2>
+                    <div class="bg-[#F0FDF4] flex justify-between items-center p-3 rounded-lg">
                         <div>
-                            <figure>
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="">
-                            </figure>
-                            <div>
-                                <h1>Mango Tree</h1>
-                                <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer.
-                                    Its dense green</p>
-                            </div>
-                            <div>
-                                <button class="btn rounded-3xl bg-[#DCFCE7] ">Fruit Tree
-                            </button>
-                            <p>$ <span>৳500</span></p>
-                            </div>
+                            <h2>Mango Tree</h2>
+                            <p>৳<span>500</span> x <span>1</span></p>
                         </div>
-                        <div class="card bg-base-100 w-96 shadow-sm">
-                            <figure>
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="card-title">
-                                    Card Title
-                                    <div class="badge badge-secondary">NEW</div>
-                                </h2>
-                                <p>A card component has a figure, a body part, and inside body there are title and
-                                    actions
-                                    parts</p>
-                                <div class="card-actions justify-end">
-                                    <div class="badge badge-outline">Fashion</div>
-                                    <div class="badge badge-outline">Products</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 w-96 shadow-sm">
-                            <figure>
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="card-title">
-                                    Card Title
-                                    <div class="badge badge-secondary">NEW</div>
-                                </h2>
-                                <p>A card component has a figure, a body part, and inside body there are title and
-                                    actions
-                                    parts</p>
-                                <div class="card-actions justify-end">
-                                    <div class="badge badge-outline">Fashion</div>
-                                    <div class="badge badge-outline">Products</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 w-96 shadow-sm">
-                            <figure>
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="card-title">
-                                    Card Title
-                                    <div class="badge badge-secondary">NEW</div>
-                                </h2>
-                                <p>A card component has a figure, a body part, and inside body there are title and
-                                    actions
-                                    parts</p>
-                                <div class="card-actions justify-end">
-                                    <div class="badge badge-outline">Fashion</div>
-                                    <div class="badge badge-outline">Products</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-base-100 w-96 shadow-sm">
-                            <figure>
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="card-title">
-                                    Card Title
-                                    <div class="badge badge-secondary">NEW</div>
-                                </h2>
-                                <p>A card component has a figure, a body part, and inside body there are title and
-                                    actions
-                                    parts</p>
-                                <div class="card-actions justify-end">
-                                    <div class="badge badge-outline">Fashion</div>
-                                    <div class="badge badge-outline">Products</div>
-                                </div>
-                            </div>
-                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="text-[16px] font-medium">Total:</h2>
+                        <p>$<span>1000</span></p>
                     </div>
                 </div>
-                <div class="border-2 border-red-500 grid col-span-1 ">
-                    <h2>catagoris</h2>
-                </div>
+
 
             </div>
         </div>
     </section>
 
-    <section class="about-section hidden">
+
+    <section class="about-section">
         <div class="mx-auto  justify-center">
             <h2 class="text-[32px] font-semibold my-7 text-center">About the Campaign</h2>
             <div class="flex items-center gap-10 justify-center md:flex-row flex-col px-4">
@@ -239,7 +157,9 @@
     </section>
 
 
-    <section class="impact hidden">
+
+
+    <section class="impact">
         <div class="bg-[#CFF0DC] p-16 mt-16 text-center">
             <h2 class="text-[32px] font-semibold py-5">Our Impact</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -258,16 +178,23 @@
             </div>
 
 
+
+
         </div>
     </section>
 
 
-    <section class="tree-form bg-green-800 flex flex-col items-center justify-center py-20 hidden">
+
+
+    <section class="tree-form bg-green-800 flex flex-col items-center justify-center py-20">
         <div>
             <h2 class="text-white text-[32px] font-semibold text-center mb-6">Plant a Tree Today</h2>
         </div>
 
+
         <div class="w-full max-w-md bg-green-700 p-6 rounded-xl shadow-lg">
+
+
 
 
             <form class="space-y-4">
@@ -275,9 +202,11 @@
                 <input type="text" placeholder="Your Name"
                     class="w-full bg-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
 
+
                 <!-- Email -->
                 <input type="email" placeholder="Your Email Address"
                     class="w-full bg-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+
 
                 <!-- Number of Trees -->
                 <select
@@ -289,6 +218,7 @@
                     <option value="20">20 Trees</option>
                 </select>
 
+
                 <!-- Button -->
                 <button type="submit"
                     class="w-full bg-yellow-400 text-green-900 font-semibold py-2 rounded-full hover:bg-yellow-500 transition bg-green-500">
@@ -298,13 +228,23 @@
         </div>
     </section>
 
-    <footer class="bg-[#14532D] hidden">
+
+    <footer class="bg-[#14532D]">
         <h2 class="text-white text-[16px] font-normal text-center py-7">© 2025 Green Earth. All Rights Reserved.</h2>
 
+
     </footer>
+
+
+    <script src="js/index.js"></script>
+
+
 
 
 </body>
 
 
+
+
 </html>
+
