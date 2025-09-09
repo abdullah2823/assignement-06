@@ -2,8 +2,6 @@
 <html lang="en">
 
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +14,10 @@
 
 
 
+
+
+
+
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -23,9 +25,17 @@
 
 
 
+
+
+
+
     <!-- style -->
     <link rel="stylesheet" href="style/style.css">
 </head>
+
+
+
+
 
 
 
@@ -46,6 +56,10 @@
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li><a>About</a></li>
                         <li><a>Gallary</a></li>
+
+
+
+
 
 
 
@@ -82,6 +96,10 @@
 
 
 
+
+
+
+
                 <div class="text-center my-3 py-10 ">
                     <button
                         class="btn btn-ghost text-[#15803D] py-3 px-5 text-[16px] font-semibold rounded-3xl bg-[#FACC15] hover:bg-green-500">Get
@@ -89,6 +107,10 @@
                 </div>
             </div>
             <img class=" lg:w-[546px]" src="./assets/hero-leaf2.png" alt="">
+
+
+
+
 
 
 
@@ -101,15 +123,15 @@
             <h2 class="text-[32px] font-semibold text-center py-7 gap-7">Choose Your Trees</h2>
 
 
+
+
             <div class="grid-cols-1 md:grid grid-cols-6 gap-5 ">
                 <div class=" md:grid col-span-1">
                     <div id="tree-categories"></div>
-                   
+
+
                 </div>
                 <div id="all-plants" class="col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    
-
-
                 </div>
                 <div class="bg-white shadow-md max-h-screen p-3 rounded-2xl md:grid col-span-1 ">
                     <h2 class="text-[20px] font-semibold">Your Cart</h2>
@@ -127,9 +149,28 @@
                 </div>
 
 
+
+
             </div>
-        </div>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="detielseContiner" class="space-y-5">
+
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
     </section>
+
+
 
 
     <section class="about-section">
@@ -156,6 +197,10 @@
 
 
 
+
+
+
+
     <section class="impact">
         <div class="bg-[#CFF0DC] p-16 mt-16 text-center">
             <h2 class="text-[32px] font-semibold py-5">Our Impact</h2>
@@ -177,8 +222,16 @@
 
 
 
+
+
+
+
         </div>
     </section>
+
+
+
+
 
 
 
@@ -189,7 +242,13 @@
         </div>
 
 
+
+
         <div class="w-full max-w-md bg-green-700 p-6 rounded-xl shadow-lg">
+
+
+
+
 
 
 
@@ -200,9 +259,13 @@
                     class="w-full bg-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
 
 
+
+
                 <!-- Email -->
                 <input type="email" placeholder="Your Email Address"
                     class="w-full bg-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+
+
 
 
                 <!-- Number of Trees -->
@@ -214,8 +277,6 @@
                     <option value="10">10 Trees</option>
                     <option value="20">20 Trees</option>
                 </select>
-
-
                 <!-- Button -->
                 <button type="submit"
                     class="w-full bg-yellow-400 text-green-900 font-semibold py-2 rounded-full hover:bg-yellow-500 transition bg-green-500">
@@ -225,23 +286,16 @@
         </div>
     </section>
 
-
     <footer class="bg-[#14532D]">
         <h2 class="text-white text-[16px] font-normal text-center py-7">© 2025 Green Earth. All Rights Reserved.</h2>
 
 
     </footer>
 
-
     <script src="js/index.js"></script>
-
-
 
 
 </body>
 
 
-
-
 </html>
-
