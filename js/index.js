@@ -148,19 +148,22 @@ const displayshwocart = (e) => {
     const titelName = e.target.parentNode.children[1].children[0].innerText;
     const id = e.target.parentNode.children[1].id;
     const price = e.target.parentNode.children[2].children[1].innerText;
-    console.log(price)
+    
 
     cardList.push({
         titelName: titelName,
         id: id,
         price: price
     })
-    console.log(cardList)
+    
     cardListitems(cardList)
 }
 
 const cardListitems = (cardList) => {
-    cardList.innerHTML = "";
+    // DOM টা আগে clear করো
+    allCardDiv.innerHTML = "";
+
+    // তারপর লুপ চালাও
     cardList.forEach(cardLi => {
         allCardDiv.innerHTML += `
                 <div class="bg-[#F0FDF4] flex justify-between p-3 rounded-lg">
@@ -179,24 +182,11 @@ const cardListitems = (cardList) => {
 }
 
 const handledeleteCard = (deletcard) => {
-    console.log(deletcard)
+    const filtercard = cardList.filter(card => card.id !== deletcard);
+    cardList = filtercard;
+    cardListitems(cardList);
 }
-// const showcards = (e) =>{
-//     const titelName = e.target.parentNode.children[1].children[0].innerText;
-//     const id = e.target.parentNode.id;
-//     console.log(e)
-// addTocard.push({
-//     titelName:titelName,
-//     id:id
-// })
-// console.log(addTocard)
 
-// }
-
-// const displayshwocart = (addTocard) =>{
-//     console.log(addTocard)
-
-// }
 
 catagorisTree();
 loadAllPlants();
