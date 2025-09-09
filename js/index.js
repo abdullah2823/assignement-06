@@ -160,10 +160,8 @@ const displayshwocart = (e) => {
 }
 
 const cardListitems = (cardList) => {
-    // DOM টা আগে clear করো
     allCardDiv.innerHTML = "";
 
-    // তারপর লুপ চালাও
     cardList.forEach(cardLi => {
         allCardDiv.innerHTML += `
                 <div class="bg-[#F0FDF4] flex justify-between p-3 rounded-lg">
@@ -182,7 +180,7 @@ const cardListitems = (cardList) => {
 }
 
 const handledeleteCard = (deletcard) => {
-    const filtercard = cardList.filter(card => card.id !== deletcard);
+    const filtercard = cardList.filter(cardLi => cardLi.id !== deletcard);
     cardList = filtercard;
     cardListitems(cardList);
 }
