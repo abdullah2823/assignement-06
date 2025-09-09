@@ -2,10 +2,11 @@
 
 const treeCatergoris = document.getElementById("tree-categories");
 const allPlantsDiv = document.getElementById("all-plants");
-const allCardDiv = document.getElementById("all-plants")
+const allCardDiv = document.getElementById("allcardContiner");
 
 const addTocard = [];
 
+let cardList = [];
 
 const catagorisTree = () => {
     fetch("https://openapi.programming-hero.com/api/categories")
@@ -116,8 +117,8 @@ const allPlantsShow = (plants) => {
                     <img class="rounded-lg w-full h-48 object-cover mx-auto rounded-2xl"
                         src="${plants.image}" alt="">
                 </figure>
-                <div>
-                    <h1 id="${plants.id}" class="text-[16px] font-semibold "  onclick="loadcardDiteails(${plants.id})">${plants.name}</h1>
+                <div id="${plants.id}">
+                    <h1  class="text-[16px] font-semibold "  onclick="loadcardDiteails(${plants.id})">${plants.name}</h1>
                     <p class="text-gray-500">${plants.description}</p>
                 </div>
                 <div class="flex justify-between items-center">
@@ -136,31 +137,66 @@ const allPlantsShow = (plants) => {
 };
 
 
-allCardDiv.addEventListener('click', (e) =>{
-   
-    if(e.target.innerText === "Add to Cart" )
-        
-        showcards(e);
-     
-})
+allPlantsDiv.addEventListener('click', (e) => {
 
-const showcards = (e) =>{
+    if (e.target.innerText === "Add to Cart") {
+        displayshwocart(e);
+    }
+    })
+
+const displayshwocart = (e) => {
     const titelName = e.target.parentNode.children[1].children[0].innerText;
-    const id = e.target.parentNode;
-    addTocard.push({
-        titelName:titelName,
-        id:id
-    })
-    displaycard(addTocard)
+    const id = e.target.parentNode.children[1].id;
+    const price = e.target.parentNode.children[2].children[1].innerText;
+    console.log(price)
 
+    cardList.push({
+        titelName: titelName,
+        id: id,
+        price: price
+    })
+    console.log(cardList)
+    cardListitems(cardList)
 }
 
-const displaycard = (addTocard) =>{
-    allCardDiv.forEach(addTocard =>{
-        allCardDiv.innerHTML += ``
+const cardListitems = (cardList) => {
+    cardList.innerHTML = "";
+    cardList.forEach(cardLi => {
+        allCardDiv.innerHTML += `
+                <div class="bg-[#F0FDF4] flex justify-between p-3 rounded-lg">
+                        <div>
+                            <h2>${cardLi.titelName}</h2>
+                            <p><span>${cardLi.price}</span> x <span>1</span></p>
+                        </div onclick="handledeleteCard(${cardLi.id})">
+                        <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    <div class="flex justify-between">
+                        <h2 class="text-[16px] font-medium">Total:</h2>
+                        <p><span>${cardLi.price}</span></p>
+                    </div>
+        `;
     })
-
 }
+
+const handledeleteCard = (deletcard) => {
+    console.log(deletcard)
+}
+// const showcards = (e) =>{
+//     const titelName = e.target.parentNode.children[1].children[0].innerText;
+//     const id = e.target.parentNode.id;
+//     console.log(e)
+// addTocard.push({
+//     titelName:titelName,
+//     id:id
+// })
+// console.log(addTocard)
+
+// }
+
+// const displayshwocart = (addTocard) =>{
+//     console.log(addTocard)
+
+// }
 
 catagorisTree();
 loadAllPlants();
